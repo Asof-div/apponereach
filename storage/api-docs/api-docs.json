@@ -1,0 +1,2160 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Onereach API",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "abiodun.adeyinka@telvida.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/apponereach/public",
+            "description": "Onereach API Server"
+        }
+    ],
+    "paths": {
+        "/api/app/account-categories": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get account category list",
+                "description": "Return Category List",
+                "operationId": "getAccountCategory",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/account-sources": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get account sources",
+                "description": "Returns list of account sources",
+                "operationId": "getAccountSources",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/countries": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get Countries",
+                "description": "Return Country list",
+                "operationId": "getCountries",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/currencies": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get Currency",
+                "description": "Return Currency list",
+                "operationId": "getCurrencies",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/incidents": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get Incidents",
+                "description": "Return Incident List",
+                "operationId": "getIncidents",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/industries": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get Industries",
+                "description": "Returns Industry list",
+                "operationId": "getIndustries",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/packages": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get Packages",
+                "description": "Returns package list",
+                "operationId": "getPackages",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/payment-terms": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get Payment terms",
+                "description": "Returns list of payment terms",
+                "operationId": "getPaymentTerms",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/states": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get states",
+                "description": "Return list of states",
+                "operationId": "getStates",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/account/users": {
+            "get": {
+                "tags": [
+                    "Account User"
+                ],
+                "summary": "Get Users",
+                "description": "Return Users Attached To Tenant",
+                "operationId": "getUsers",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Account User"
+                ],
+                "summary": "Create new user",
+                "description": "Return user data",
+                "operationId": "createNewUser",
+                "parameters": [
+                    {
+                        "name": "firstname",
+                        "in": "path",
+                        "description": "Firstname ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lastname",
+                        "in": "path",
+                        "description": "Lastname ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "Email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "job_role",
+                        "in": "path",
+                        "description": "Job role",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "Password ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "path",
+                        "description": "Retry password",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "credit_limit",
+                        "in": "path",
+                        "description": "Type of limits, non-blocking, quota",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "credits",
+                        "in": "path",
+                        "description": "Credit ",
+                        "required": true,
+                        "schema": {
+                            "type": "decimal"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/auth/signup": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Signup User",
+                "description": "Signup User",
+                "operationId": "signup",
+                "parameters": [
+                    {
+                        "name": "corporation_name",
+                        "in": "path",
+                        "description": "company name ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "corporation_short_name",
+                        "in": "path",
+                        "description": "Company short or account name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "firstname",
+                        "in": "path",
+                        "description": "user's firstname ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lastname",
+                        "in": "path",
+                        "description": "User's lastname",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "User's email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "plan",
+                        "in": "path",
+                        "description": "selected plan name, Exceutive, Standard..",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "path",
+                        "description": "re-type password to match the password field",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User successfully created"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/auth/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Login User",
+                "description": "Login User",
+                "operationId": "login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "User email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "User Password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "account",
+                        "in": "path",
+                        "description": "Company short or account name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User successfully autheticated"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/find-domain": {
+            "get": {
+                "tags": [
+                    "Domain"
+                ],
+                "summary": "Get search available domain",
+                "description": "Get available domain",
+                "operationId": "findAvailableDomain",
+                "parameters": [
+                    {
+                        "name": "domain",
+                        "in": "path",
+                        "description": "customer unique identifier",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Available domain"
+                    },
+                    "402": {
+                        "description": "Invalid"
+                    }
+                }
+            }
+        },
+        "/api/app/user": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get Current Authenticated User",
+                "description": "Get Current Authenticated User",
+                "operationId": "getUser",
+                "responses": {
+                    "200": {
+                        "description": "User details"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                }
+            }
+        },
+        "/api/app/auth/password": {
+            "put": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Change Password",
+                "description": "Change Password",
+                "operationId": "changePassword",
+                "parameters": [
+                    {
+                        "name": "current_password",
+                        "in": "path",
+                        "description": "Current User Password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "New User Password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "in": "path",
+                        "description": "New User Password Confirmation",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "User password is has been changed"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/auth/password/reset": {
+            "put": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Reset Password",
+                "description": "Reset Password",
+                "operationId": "resetPassword",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "User email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "account",
+                        "in": "path",
+                        "description": "Company short or account name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "User password is has been changed"
+                    },
+                    "200": {
+                        "description": "No user exists for this phonenumber"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/billing/order/cart": {
+            "get": {
+                "tags": [
+                    "Billing Order"
+                ],
+                "summary": "Get cart information",
+                "description": "Return data in the cart",
+                "operationId": "getCart",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/billing/subscription/current": {
+            "get": {
+                "tags": [
+                    "Billing Subscription"
+                ],
+                "summary": "Get Current Subscription ",
+                "description": "Current Subscription Details",
+                "operationId": "App\\Http\\Controllers\\Api\\Tenant\\Billing\\SubscriptionController::currentSubscription",
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    },
+                    "401": {
+                        "description": "Unautorized"
+                    }
+                }
+            }
+        },
+        "/api/app/billing/subscription/current/procesing": {
+            "get": {
+                "tags": [
+                    "Billing Subscription"
+                ],
+                "summary": "Get Current Incomplete Subscription ",
+                "description": "Processing Subscription ",
+                "operationId": "App\\Http\\Controllers\\Api\\Tenant\\Billing\\SubscriptionController::currentProcessingSubscription",
+                "responses": {
+                    "200": {
+                        "description": "successfully "
+                    },
+                    "401": {
+                        "description": "Unautorized"
+                    }
+                }
+            }
+        },
+        "/api/app/registion/save-order": {
+            "post": {
+                "tags": [
+                    "Boarding"
+                ],
+                "summary": "Save customer order",
+                "description": "Returns generated Order and Transaction",
+                "operationId": "saveOrder",
+                "parameters": [
+                    {
+                        "name": "subscription_id",
+                        "in": "path",
+                        "description": "Subscription id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/registration/confirm-order": {
+            "post": {
+                "tags": [
+                    "Boarding"
+                ],
+                "summary": "Confirm Order",
+                "description": "Returns confirmed order deta",
+                "operationId": "confirmOrderById",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "path",
+                        "description": "Order id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/registration/confirm-payment": {
+            "get": {
+                "tags": [
+                    "Boarding"
+                ],
+                "summary": "Confirm payment status from payment gateway",
+                "description": "Return payment status and activte account on successful payment.",
+                "operationId": "confirmPayment",
+                "parameters": [
+                    {
+                        "name": "trxref",
+                        "in": "path",
+                        "description": "Transaction reference no",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/crm/accounts": {
+            "get": {
+                "tags": [
+                    "CRM Account"
+                ],
+                "summary": "Get Customers ",
+                "description": "Returns customers list",
+                "operationId": "getAccountList",
+                "responses": {
+                    "200": {
+                        "description": "Customers"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRM Account"
+                ],
+                "summary": "Create new customer account",
+                "description": "Returns account data",
+                "operationId": "creteNewAccount",
+                "parameters": [
+                    {
+                        "name": "account_mananger",
+                        "in": "path",
+                        "description": "Drop down list of users ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Customer/accoount name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country_id",
+                        "in": "path",
+                        "description": "list of country id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "private_note",
+                        "in": "path",
+                        "description": "private information about the customer",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "public_note",
+                        "in": "path",
+                        "description": "public information about the customer",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "industry_id",
+                        "in": "path",
+                        "description": "list of instustries id from industry resource",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "contact email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "phone",
+                        "in": "path",
+                        "description": "phone number",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "payment_term_id",
+                        "in": "path",
+                        "description": "list of payment terms id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "account_source_id",
+                        "in": "path",
+                        "description": "list of account source id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "account_category_id",
+                        "in": "path",
+                        "description": "list of account category id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "customer address",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "state_id",
+                        "in": "path",
+                        "description": "list of state id",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "vat_number",
+                        "in": "path",
+                        "description": "vat number",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "postcode",
+                        "in": "path",
+                        "description": "postcode",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "webasite",
+                        "in": "path",
+                        "description": "customer web link",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency_id",
+                        "in": "path",
+                        "description": "list of currency id",
+                        "required": false,
+                        "schema": {
+                            "type": "id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "account successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/crm/accounts/{id}": {
+            "get": {
+                "tags": [
+                    "CRM Account"
+                ],
+                "summary": "Get Account Information",
+                "description": "Returns account deta",
+                "operationId": "getAccountById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Account Id ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Operattion"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "CRM Account"
+                ],
+                "summary": "Update customer Information",
+                "description": "Returns updated customer data",
+                "operationId": "udateAccountInformation",
+                "parameters": [
+                    {
+                        "name": "account_mananger",
+                        "in": "path",
+                        "description": "User id ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Customer/accoount name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country_id",
+                        "in": "path",
+                        "description": "list of country id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "private_note",
+                        "in": "path",
+                        "description": "private information about the customer",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "public_note",
+                        "in": "path",
+                        "description": "public information about the customer",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "industry_id",
+                        "in": "path",
+                        "description": "list of instustries id from industry resource",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "contact email",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "phone",
+                        "in": "path",
+                        "description": "phone number",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "payment_term_id",
+                        "in": "path",
+                        "description": "list of payment terms id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "account_source_id",
+                        "in": "path",
+                        "description": "list of account source id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "account_category_id",
+                        "in": "path",
+                        "description": "list of account category id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "customer address",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "state_id",
+                        "in": "path",
+                        "description": "list of state id",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "vat_number",
+                        "in": "path",
+                        "description": "vat number",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "postcode",
+                        "in": "path",
+                        "description": "postcode",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "website",
+                        "in": "path",
+                        "description": "customer web link",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency_id",
+                        "in": "path",
+                        "description": "list of currency id",
+                        "required": false,
+                        "schema": {
+                            "type": "id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRM Account"
+                ],
+                "summary": "Delete customer account",
+                "description": "Returns list of account",
+                "operationId": "deleteAccountById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Account id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/media/dialplan": {
+            "get": {
+                "tags": [
+                    "Media Dialplan"
+                ],
+                "summary": "Get Dialplan",
+                "description": "Return Dialplan List.",
+                "operationId": "getDialplan",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/media/extensions": {
+            "get": {
+                "tags": [
+                    "Media Extension"
+                ],
+                "summary": "Get Extension",
+                "description": "Return Extension List.",
+                "operationId": "getExtension",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Media Extension"
+                ],
+                "summary": "Create new Extension",
+                "description": "Returns extension data",
+                "operationId": "creteNewExtension",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Extension user display name ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "extension",
+                        "in": "path",
+                        "description": "user extension number 4 - 5 digits and must be unique",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Assigned owner of the extension",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "account successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/extensions/{number}": {
+            "get": {
+                "tags": [
+                    "Media Extension"
+                ],
+                "summary": "Get Extenision Information",
+                "description": "Returns extension deta",
+                "operationId": "getExtensionById",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "description": "Extension number ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Operattion"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Media Extension"
+                ],
+                "summary": "Delete Extension",
+                "description": "Returns extension data",
+                "operationId": "deleteExtension",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "description": "user extension number ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "account successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Cant Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/extensions/{id}": {
+            "put": {
+                "tags": [
+                    "Media Extension"
+                ],
+                "summary": "Update Extension",
+                "description": "Returns extension data",
+                "operationId": "updateExtension",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Extension user display name ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "extension",
+                        "in": "path",
+                        "description": "user extension number 4 - 5 digits and must be unique",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Assigned owner of the extension",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "change_password",
+                        "in": "path",
+                        "description": "Checkbox to generate new password",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "account successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Cant Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/images": {
+            "get": {
+                "tags": [
+                    "Media Image"
+                ],
+                "summary": "Get All Images",
+                "description": "Returns images data",
+                "operationId": "getAllImages",
+                "responses": {
+                    "200": {
+                        "description": "account successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Media Image"
+                ],
+                "summary": "Create Image",
+                "description": "Returns Image data",
+                "operationId": "createImage",
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "path",
+                        "description": "Upload image file ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": " successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/images/{id}": {
+            "delete": {
+                "tags": [
+                    "Media Image"
+                ],
+                "summary": "Delete From Image",
+                "description": "Returns image data",
+                "operationId": "deleteImage",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Image id ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully deleted"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/numbers": {
+            "get": {
+                "tags": [
+                    "Media Destination Numbers"
+                ],
+                "summary": "Get Numbers",
+                "description": "Returns Destination Number List",
+                "operationId": "getNumbers",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/app/media/pilot-number": {
+            "get": {
+                "tags": [
+                    "Media Pilot Number"
+                ],
+                "summary": "Get Pilot Numbers",
+                "description": "Returns Pilot Number Attached To Current Tenant",
+                "operationId": "getPilotNumber",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/media/pilot-number/{number}": {
+            "get": {
+                "tags": [
+                    "Media Pilot Number"
+                ],
+                "summary": "Get Pilot Number",
+                "description": "Returns pilot number data",
+                "operationId": "getPilotNumberByNumber",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "description": "pilot number ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "completed"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/pilot-number/announcement/{number}": {
+            "put": {
+                "tags": [
+                    "Media Pilot Number"
+                ],
+                "summary": "Get Pilot Number",
+                "description": "Returns pilot number data",
+                "operationId": "getPilotNumberByNumber",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "description": "pilot number ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "completed"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/sounds": {
+            "get": {
+                "tags": [
+                    "Media Sound"
+                ],
+                "summary": "Get All Sounds",
+                "description": "Returns sounds data",
+                "operationId": "getAllSounds",
+                "responses": {
+                    "200": {
+                        "description": "account successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/sounds/upload": {
+            "post": {
+                "tags": [
+                    "Media Sound"
+                ],
+                "summary": "Create new sound",
+                "description": "Returns sound data",
+                "operationId": "createSoundsByUpload",
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "path",
+                        "description": "file upload",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/sounds/call-to-record": {
+            "post": {
+                "tags": [
+                    "Media Sound"
+                ],
+                "summary": "Create Call To Record sound",
+                "description": "Returns sound data",
+                "operationId": "createSoundsWithCallToRecord",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "title ",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/sound/{id}": {
+            "delete": {
+                "tags": [
+                    "Media Sound"
+                ],
+                "summary": "Delete Sound",
+                "description": "Returns sound data",
+                "operationId": "deleteSound",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "sound id ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully deleted"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "403": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/tts": {
+            "get": {
+                "tags": [
+                    "Media Text-To-Speech"
+                ],
+                "summary": "List Text To Speech",
+                "description": "Returns text to speech data",
+                "operationId": "listTextToSpeech",
+                "responses": {
+                    "200": {
+                        "description": "successfully "
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Media Text-To-Speech"
+                ],
+                "summary": "Create Text To Speech",
+                "description": "Returns text to speech data",
+                "operationId": "createTextToSpeech",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "Text title ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "in": "path",
+                        "description": "text content",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/media/tts/{id}": {
+            "put": {
+                "tags": [
+                    "Media Text-To-Speech"
+                ],
+                "summary": "Create new Extension",
+                "description": "Returns extension data",
+                "operationId": "updateTextToSpeech",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "tts unique id ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "title to describe the content",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "in": "path",
+                        "description": "text content",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully updated"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Media Text-To-Speech"
+                ],
+                "summary": "Delete TextToSpeech",
+                "description": "Returns tts data",
+                "operationId": "deleteTextToSpeech",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "text id ",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully deleted"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    },
+                    "402": {
+                        "description": "Can not Perform Action"
+                    }
+                }
+            }
+        },
+        "/api/app/pilot/search": {
+            "get": {
+                "tags": [
+                    "Pilot Number"
+                ],
+                "summary": "Search pilot number",
+                "description": "Returns list of available pilot numbers",
+                "operationId": "getPilotNumber",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "description": "phone number",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/pilot/reserve": {
+            "get": {
+                "tags": [
+                    "Pilot Number"
+                ],
+                "summary": "Add pilot number to cart ",
+                "description": "Returns pilot number for few hours until cart expires",
+                "operationId": "reservePilotNumberById",
+                "parameters": [
+                    {
+                        "name": "number_id",
+                        "in": "path",
+                        "description": "pilot number id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/pilot/remove": {
+            "get": {
+                "tags": [
+                    "Pilot Number"
+                ],
+                "summary": "Remove pilot number from cart",
+                "description": "Return remaining list of numbers in the cart",
+                "operationId": "removePilotNumberById",
+                "parameters": [
+                    {
+                        "name": "number_id",
+                        "in": "path",
+                        "description": "Pilot Number id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/pilot/reserved": {
+            "get": {
+                "tags": [
+                    "Pilot Number"
+                ],
+                "summary": "Get Number is the cart",
+                "description": "Returns list of pilot numbers in the cart.",
+                "operationId": "getReservedNumbers",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/trackers": {
+            "get": {
+                "tags": [
+                    "User Tracker"
+                ],
+                "summary": "Get Tracker",
+                "description": "Return Tracker.",
+                "operationId": "getTracker",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/trackers/check-in": {
+            "post": {
+                "tags": [
+                    "User Tracker"
+                ],
+                "summary": "Log user longitude and latitude",
+                "description": "Check-in user longitude and lat",
+                "operationId": "checkInLocation",
+                "parameters": [
+                    {
+                        "name": "long",
+                        "in": "path",
+                        "description": "Longitude",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lat",
+                        "in": "path",
+                        "description": "Latitude",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Action have been logged"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/trackers/user": {
+            "get": {
+                "tags": [
+                    "User Tracker"
+                ],
+                "summary": "Get User Tracker",
+                "description": "Return Tracker.",
+                "operationId": "getUserTracker",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/voucher/claim": {
+            "post": {
+                "tags": [
+                    "Voucher"
+                ],
+                "summary": "User Can Claim Voucher To Get Discount ",
+                "description": "Voucher User",
+                "operationId": "App\\Http\\Controllers\\Api\\Tenant\\VoucherController::claimVoucher",
+                "parameters": [
+                    {
+                        "name": "voucher_code",
+                        "in": "path",
+                        "description": "Voucher code with 12 characters",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "discount successfully applied"
+                    },
+                    "442": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        },
+        "/api/app/voucher/info": {
+            "get": {
+                "tags": [
+                    "Voucher"
+                ],
+                "summary": "Get Voucher Information to see applicable discount. ",
+                "description": "Voucher User",
+                "operationId": "App\\Http\\Controllers\\Api\\Tenant\\VoucherController::getVoucherData",
+                "parameters": [
+                    {
+                        "name": "voucher_code",
+                        "in": "path",
+                        "description": "Voucher code with 12 characters",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Summary infomation about the voucher and amount of discount attached."
+                    },
+                    "442": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "Password Based": {
+                "type": "oauth2",
+                "description": "Use a global client_id / client_secret and your username / password combo to obtain a token",
+                "in": "header",
+                "flows": {
+                    "password": {
+                        "authorizationUrl": "/oauth/authorize",
+                        "tokenUrl": "/oauth/token",
+                        "refreshUrl": "/oauth/token/refresh",
+                        "scopes": []
+                    }
+                },
+                "scheme": "https"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "project",
+            "description": "Everything about your Projects",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
+            "name": "user",
+            "description": "Operations about user",
+            "externalDocs": {
+                "description": "Find out more about",
+                "url": "http://swagger.io"
+            }
+        }
+    ],
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}

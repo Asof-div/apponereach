@@ -1,0 +1,20 @@
+﻿BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20190611T010000Z
+DTEND:20190611T030000Z
+DTSTAMP:20190611T030000Z
+UID:20
+CREATED:20190624T075800Z
+DESCRIPTION:{ aaaaaaaa }
+LAST-MODIFIED:20190624T075800Z
+LOCATION:700216
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY: { {"id":3,"tenant_id":1,"code":"00001","context":"00001","type":"private","mode":"Audio","name":"Conference","number":"700216","members":[{"member_type":"number","member_number":"09033943509","member_id":1,"member_label":"Abiodun"},{"member_type":"extension","member_number":"230","member_id":1,"member_label":"Abiodun"}],"auto_record":false,"wait_admin":true,"lock":true,"announce":true,"record":true,"admin_pin":null,"guest_pin":"4356","enable_audio":true,"enable_video":false,"welcome_sound":null,"start_date":"2019-06-19 00:00:00","end_date":null,"expiration":"never","call_flow_id":7,"created_at":"2019-06-19 18:30:47","updated_at":"2019-06-19 18:30:47","deleted_at":null}->call_flow->dial_string }
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

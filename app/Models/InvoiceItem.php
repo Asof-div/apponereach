@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use App\Scopes\BelongsToTenant;
+
+use App\Scopes\Facade\TenantManagerFacade as TenantManager;
+use App\Traits\NonGlobalTenantScopeTrait;
+
+class InvoiceItem extends Model
+{    
+	use NonGlobalTenantScopeTrait;
+	
+    protected $guarded = ['id'];
+
+}
